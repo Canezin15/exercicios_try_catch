@@ -14,15 +14,18 @@ class Animal {
   } 
 
   atributos() {
-    return {
-      nome: this.nome,
-      idade: this.idade,
-      especie: this.especie
-    };
+    if ((this.nome != "") && (this.idade != "") && (this.especie != "")){
+      return this.nome + this.idade + this.especie
+    }
+    else{
+      throw new Error("há campos sem preenchimento")
+    }
+
+
   }
 }
 
-const meuAnimal = new Animal("Fido", 3, "cachorro");
+const meuAnimal = new Animal("", 3, "cachorro");
 const atributos = meuAnimal.mostrarAtributos();
 
 // Imprimindo os atributos
