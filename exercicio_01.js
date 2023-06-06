@@ -18,7 +18,7 @@ class Animal {
       return this.nome + this.idade + this.especie
     }
     else{
-      throw new Error("há campos sem preenchimento")
+      throw new Error("Verifique os campos")
     }
 
 

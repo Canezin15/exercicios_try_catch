@@ -14,15 +14,16 @@ class Estudante {
   }
 
   atributos() {
-    return {
-      nome: this.nome,
-      idade: this.idade,
-      turma: this.turma
-    };
+    if((this.nome != "") && (this.idade != "") && (this.turma != "")){
+      return this.nome + this.idade + this.turma
+    }
+    else{
+      throw new Error("Verifique os campos")
+    }
   }
 }
 
-const estudante = new Estudante("João", 16, "3A");
+const estudante = new Estudante("", 16, "3A");
 
 const atributos = estudante.mostrarAtributos();
 
